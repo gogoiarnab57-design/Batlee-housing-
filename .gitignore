@@ -1,0 +1,14 @@
+# Customer-uploaded product photos stay on the server, not in git
+public_html/uploads/*
+!public_html/uploads/.htaccess
+!public_html/uploads/index.php
+
+# Local test databases and logs
+*.sqlite
+*.log
+
+# Editor / OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

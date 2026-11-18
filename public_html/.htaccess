@@ -1,0 +1,28 @@
+# Batlee Housing Solution - Apache security rules
+Options -Indexes
+ServerSignature Off
+
+# Never serve internal files
+<FilesMatch "\.(sql|sqlite|md|log|bak|ini|inc|env)$">
+  Require all denied
+</FilesMatch>
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
+
+# Force HTTPS once your SSL certificate is installed (remove the # at the start of the 3 lines below)
+#RewriteEngine On
+#RewriteCond %{HTTPS} !=on
+#RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "DENY"
+</IfModule>
+
+# PHP hardening (works on most shared hosts)
+<IfModule mod_php.c>
+  php_flag display_errors off
+  php_flag expose_php off
+  php_flag session.cookie_httponly on
+</IfModule>
