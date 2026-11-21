@@ -1,5 +1,17 @@
 # Batlee Housing Solution – Online Shop
 
+## Live demo (front-end only)
+
+The `docs/` folder is a complete **front-end version** of the shop (HTML, CSS and JavaScript only, no PHP and no SQL). It runs on GitHub Pages:
+
+**https://gogoiarnab57-design.github.io/Batlee-housing-/**
+
+It has the same pages as the full shop: products, cart, checkout, payment options, customer login and account, and the admin panel (`@admin` / `12345`). Because there is no server, everything (products, orders, accounts) is saved only in the visitor's own browser. Use it to show the design; for a real shop that takes orders from many customers, use the PHP + MySQL version in `public_html/`.
+
+To run it on your own computer, open `docs/index.html` in a browser.
+
+---
+
 A PHP + MySQL e-commerce site for bathroom products, kitchen accessories, hardware and home utilities.
 Customers browse, add to cart, enter delivery details and choose a payment option. The admin manages everything from the Admin Panel.
 
